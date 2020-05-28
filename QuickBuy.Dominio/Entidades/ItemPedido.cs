@@ -8,7 +8,11 @@
 
         public override void validete()
         {
-            throw new System.NotImplementedException();
+            if (ProdutoId == 0)
+                AdicionarCritica("Não foi encontrado o produto");
+
+            if (Quantidade == 0)
+                AdicionarCritica("Quantidade não foi informada");
         }
     }
 }
