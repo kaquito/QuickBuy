@@ -4,6 +4,8 @@ namespace QuickBuy.Dominio.Entidades
 {
     public class Usuario : Entidade
     {
+        public object id;
+
         public int Id { get; set; }        
         public string Email { get; set; }
         public string Senha { get; set; }
@@ -13,7 +15,7 @@ namespace QuickBuy.Dominio.Entidades
         /// <summary>
         /// Um usuario pode ter nenhum ou muitos pedidos
         /// </summary>
-        public ICollection<Pedido> Pedidos { get; set; }
+        public virtual ICollection<Pedido> Pedidos { get; set; }
 
         public override void validete()
         {
