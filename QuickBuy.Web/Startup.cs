@@ -75,8 +75,8 @@ namespace QuickBuy.Web
                 if (env.IsDevelopment())
                 {
                     // tirado para resolver o problema de sincronização 
-                     spa.UseAngularCliServer(npmScript: "start");
-                    //spa.UseProxyToSpaDevelopmentServer("http://localhost:4200/");
+                     //spa.UseAngularCliServer(npmScript: "start");
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:4200/");
                 }
             });
         }
